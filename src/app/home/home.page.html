@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      首頁
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <img src="\assets\images\{{ scene.img }}" />
+
+    <ion-card-header>
+      <ion-list>
+        <ion-card-title> {{ scene.title }} </ion-card-title>
+      </ion-list>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p> {{ scene.desc }} </p>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <!--按鈕超連結建議用 [routerLink] 做處理 格式為: ""中夾[] 連結位置用''包住-->
+  <ion-button color="warning" expand="block" [routerLink]="['/detail']" >
+    下一頁
+  </ion-button>
+
+</ion-content>
