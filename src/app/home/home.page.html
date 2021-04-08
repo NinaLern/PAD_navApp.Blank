@@ -10,8 +10,13 @@
 
     <ion-list>
         <!--（click） => 點擊時的事件繫節-->
-        <ion-item *ngFor="let l of lists" (click)="detail(l.id)">
-            {{ l.id }} {{ l.name }}
+        <ion-item *ngFor="let l of places" (click)="detail(l.id)">
+            <ion-label class="insidecontainer">
+                {{ l.title }}
+            </ion-label>
+            <ion-thumbnail slot="start">
+                <img class="img" src="/assets/images/{{ l.photoURL }}">
+            </ion-thumbnail>
         </ion-item>
     </ion-list>
 

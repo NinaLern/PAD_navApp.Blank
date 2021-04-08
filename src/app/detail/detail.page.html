@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title> {{data.name}}</ion-title>
+        <ion-title> {{data.title}}</ion-title>
         <ion-buttons slot="start">
             <ion-back-button>返回</ion-back-button>
         </ion-buttons>
@@ -9,45 +9,21 @@
 
 <ion-content [fullscreen]="true">
 
-    <!-- <ion-card>
-    <img src="\assets\images\{{ scene.img }}" />
-
-    <ion-card-header>
-      <ion-list>
-        <ion-card-title> {{ scene.title }} </ion-card-title>
-      </ion-list>
-    </ion-card-header>
-
-    <ion-card-content>
-      <p> {{ scene.desc }} </p>
-    </ion-card-content>
-
-    </ion-card> -->
-
     <ion-card>
+        <img src="\assets\images\{{ data.photoURL }}" />
 
-        <ion-item>
-            <ion-icon name="stats-chart-outline"></ion-icon>
+        <ion-card-header>
+            <ion-list>
+                <ion-card-title> {{ data.title }} </ion-card-title>
+            </ion-list>
+        </ion-card-header>
 
-            <h4 class="font-margin">
-                {{data.id}} {{data.name}}
-            </h4>
-
-        </ion-item>
-
-        <ion-item>
-            <ion-grid fixed>
-                <ion-row>
-                    <ion-col size="6">{{data.Desc}}</ion-col>
-                </ion-row>
-                <ion-row>
-                    <ion-col size="6">股價: {{ data.price }}</ion-col>
-                    <ion-col size="6">本益比: {{ data.PER }}</ion-col>
-                </ion-row>
-            </ion-grid>
-        </ion-item>
+        <ion-card-content>
+            <p> {{ data.intro }} </p>
+        </ion-card-content>
 
     </ion-card>
+
 
     <!--按鈕超連結建議用 [routerLink] 做處理 格式為: ""中夾[] 連結位置用''包住-->
     <!-- <ion-button color="warning" expand="block" [routerLink]="['/home']">
