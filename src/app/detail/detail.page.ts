@@ -23,16 +23,16 @@ export class DetailPage implements OnInit {
     {id: 3008, name: '大立光', price: 2695.0, PER: 18.6, PBR: 7.83,
         yield: 1.06, Desc: '各式光學鏡頭模組研發設計生產銷售'}
   ];
-  id='';
+  id = '';
   data = null;
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
     // X 像是函式中的變數
     // tostring 將數字類型資料變為字串
-    //filter(func內容)
+    // filter(func內容)
     this.data = this.lists.filter(x => x.id.toString() === this.id)[0];
   }
 

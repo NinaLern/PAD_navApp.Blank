@@ -30,7 +30,7 @@ export class HomePage {
 
   // 切換到detail頁面的時候，將代號傳過去。
   // 參數stockid（股票代號）：類型（數字）
-  detail(stockid:number) {
+  detail(stockid: number) {
     // ['網址',{要傳送的代號跟名稱}]
     this.router.navigate(['detail', {id: stockid}]);
   }
